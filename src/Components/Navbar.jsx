@@ -17,8 +17,7 @@ function Navbar() {
                     <ul className="nav">
                       <li><Link to="index.html" className="active">Home</Link></li>
                       <li><Link to="properties.html">Properties</Link></li>
-                      <li><Link to="property-details.html">Property Details</Link></li>
-                      <li><Link to="contact.html">Contact Us</Link></li>
+                      <li><Link to="/features">features</Link></li>
                       <li><Link to="#"><i className="fa fa-calendar"></i> Schedule a visit</Link></li>
                   </ul>   
                     <Link className='menu-trigger'>

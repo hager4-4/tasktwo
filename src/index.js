@@ -18,6 +18,7 @@ import App from "./App";
 import { createRoot } from "react-dom/client";
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import { AllData } from "./Data/AllData";
+import AllFeatures from "./Features/AllFeatures";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,12 @@ const router = createBrowserRouter([
     ),
   },
 
+  {
+    path: "features",
+    element: (
+        <AllFeatures/>
+    ),
+  },
   
 ]);
 
