@@ -19,6 +19,9 @@ import { createRoot } from "react-dom/client";
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import { AllData } from "./Data/AllData";
 import AllFeatures from "./Features/AllFeatures";
+import AllShop from "./shop/AllShop";
+import AllCart from "./Cart/AllCart";
+import { CartProvider } from "react-use-cart";
 
 const router = createBrowserRouter([
   {
@@ -35,12 +38,29 @@ const router = createBrowserRouter([
     ),
   },
   
+  {
+    path: "shop",
+    element: (
+        <AllShop/>
+    ),
+  },
+
+  {
+    path: "cart",
+    element: (
+        <AllCart/>
+    ),
+  },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <AllData>
-    <RouterProvider router={router} /> 
-  </AllData>
+
+  <CartProvider>
+    <AllData>
+      <RouterProvider router={router}/>
+    </AllData>
+  </CartProvider>
   // هنا ال بين الكلوزينج تاج children
   // هنروح بقا لل alldata ونكتب الطفل دا فيهاااا
   // الصفحات دي كلها اتبصات as a props و children لل props

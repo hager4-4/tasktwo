@@ -8,9 +8,9 @@ function AllData({children}) {
     // هنا اي تغيير بيحصل لحظي "بأمن نفسي"
     useEffect( ()=>{
 
-        axios.get('https://fakestoreapi.com/products')
+        axios.get('https://dummyjson.com/products')
         .then((result)=>{
-            setApi(result.data) // بإستخدام ال setApi بنخزن الداتا اللي جايه من ال api في ال api اللي فوق
+            setApi(result.data.products) // بإستخدام ال setApi بنخزن الداتا اللي جايه من ال api في ال api اللي فوق
         })
         
     },[] );

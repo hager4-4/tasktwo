@@ -5,21 +5,23 @@ import Navbar from './Components/Navbar';
 import SubNavbar from './Components/SubNavbar';
 import { apiValue } from './Data/AllData';
 import Cart from './Cart' ;
+import { CartProvider } from 'react-use-cart';
 
 // طريقة كود jsx
 // اللي بيترجمهاbabel ومينفعش يبقي ديف تحته ديف  لا لازم يبقي ديف جواه اي كمية من الديفات
 // function base component
+// اغلب اكواد ال جافا بتتكتب قبل الريترن
 
 function App() {
     const data = useContext(apiValue)
 return (
-    <div >
+    <CartProvider>
         <Preloader/>
         <SubNavbar/>
         <Navbar/>
         <Main/>
         <Cart nameee="ali" ageee="20"/> {/* هنا بعتنا داتا من الاب لل كارت عن طريق البروبس */}
-    </div>
+    </CartProvider>
 );
 }
 export default App; // لازم تصدرها عشان تشتغل
