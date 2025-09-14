@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'; // اوبشن يعني مش لازم تقول انك شغال رياكت
 import Main from './Home/Main'; // هنا بنستورد  من فولدر هوم
-import Preloader from './Components/Preloader';
+
 import Navbar from './Components/Navbar';
 import SubNavbar from './Components/SubNavbar';
 import { apiValue } from './Data/AllData';
@@ -16,7 +16,7 @@ function App() {
     const data = useContext(apiValue)
 return (
     <CartProvider>
-        <Preloader/>
+        
         <SubNavbar/>
         <Navbar/>
         <Main/>
